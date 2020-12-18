@@ -1,12 +1,15 @@
 //buttons
-// let red = document.getElementById("red-button");
-// let green = document.getElementById("green-button");
-// let blue = document.getElementById("blue-button");
+let red = document.getElementById("red-button");
+let green = document.getElementById("green-button");
+let blue = document.getElementById("blue-button");
+let yellow = document.getElementById("yellow-button")
+//click event 
+// 
 
-// //click event 
-// red.addEventListener("click", function(event) {
-//     event.preventDefault();
-// }
+function clickButton() {
+    console.log("it is alive!")
+}
+
 
 // let recordedSeq = [];
 //variable simon is the sequence
