@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 120px;
+}
+
+.button {
+    height: 200px;
+    width: 200px; 
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
