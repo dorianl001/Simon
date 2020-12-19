@@ -43,4 +43,13 @@ for (let i = 0; i < 4; i++) {
     let gameButtons = ["red", "green", "blue", "yellow"];
     setTimeout( () => console.log(initialSeq[i]), i * 3000)
 }
+
 //dom manipulation for buttons to light up in a random sequen
+
+//this variable will keep track of the number of rounds played
+let level = 0;
+
+//create a function that will start the next sequence of clicks/new round
+function newRound() {
+    level += 1;
+} 
