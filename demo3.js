@@ -1,5 +1,6 @@
 //buttons
 let red = document.getElementById("red-button");
+// red.style.border = "thick solid #0000FF"
 let green = document.getElementById("green-button");
 // green.style.border = "thick solid #0000FF";
 let blue = document.getElementById("blue-button");
@@ -30,8 +31,14 @@ startButton.addEventListener("click", startFunc)
 
 
 function startFunc() {
-    setTimeout( () => {green.style.border = "thick solid #0000FF";}, 500)
+    setTimeout( () => {red.style.border = "thick solid #0000FF";}, 600)
+    setTimeout( () => {red.style.border = "none";}, 2000)
+    setTimeout( () => {green.style.border = "thick solid #0000FF";}, 600)
     setTimeout( () => {green.style.border = "none";}, 2000)
+    setTimeout( () => {blue.style.border = "thick solid #000000";}, 600)
+    setTimeout( () => {blue.style.border = "none";}, 2000)
+    setTimeout( () => {yellow.style.border = "thick solid #0000FF";}, 600)
+    setTimeout( () => {yellow.style.border = "none";}, 2000)
     // startButton.style.visibility = "hidden"
     // green.style.border = "thick solid #0000FF";
     // green.style.border = "none";
