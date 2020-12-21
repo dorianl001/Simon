@@ -11,36 +11,33 @@ function clickButton() {
 }
 
 //the sequence the game will initiate
-let initialSeq = [];
+let initialSeq = Array(4).fill().map((element, index) => index + 0);
+console.log(initialSeq)
 
 //the sequence the user will repeat
 let userSeq = [];
 
 //start button 
-const startButton = document.querySelector("#startFunction");
-
-//this function will start the game when the startButton is clicked
-function startFunc() {
-    startButton.querySelector.add("hidden");
-}
+ startButton = document.querySelector("#startFunc");
 
 //click event listener for the startButton
 startButton.addEventListener("click", startFunc)
 
-et initialSeq = Array(4).fill().map((element, index) => index + 0);
- console.log(initialSeq)
 
+function startFunc() {
+    startButton.setAttribute("display", "hidden");
+}
+
+ //randomizer 
  function randNumber() {
-    // let gameButtons = ["red", "green", "blue", "yellow"]
+     let gameButtons = ["red", "green", "blue", "yellow"]
     var randNum = Math.floor(Math.random() * gameButtons.length);
-    console.log(randNum)
     //initialSeq.push(randNum)
     return randNum 
 }
 
 //add intervals
 for (let i = 0; i < 4; i++) {
-    let gameButtons = ["red", "green", "blue", "yellow"];
     setTimeout( () => console.log(initialSeq[i]), i * 3000)
 }
 
