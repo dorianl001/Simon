@@ -1,9 +1,14 @@
 //buttons
 let red = document.getElementById("red-button");
 let green = document.getElementById("green-button");
+// green.style.border = "thick solid #0000FF";
 let blue = document.getElementById("blue-button");
+// blue.style.border = "thick solid #000000";
 let yellow = document.getElementById("yellow-button");
-let startButton = document.querySelector("startFunc");
+// yellow.style.border = "thick solid #0000FF";
+let startButton = document.querySelector("#startFunc");
+//stop button
+let stopButton = document.querySelector("#stopFunc");
 
 //click event  
 function clickButton() {
@@ -25,8 +30,31 @@ startButton.addEventListener("click", startFunc)
 
 
 function startFunc() {
-    startButton.setAttribute("display", "hidden");
+    setTimeout( () => {green.style.border = "thick solid #0000FF";}, 500)
+    setTimeout( () => {green.style.border = "none";}, 2000)
+    // startButton.style.visibility = "hidden"
+    // green.style.border = "thick solid #0000FF";
+    // green.style.border = "none";
+    // yellow.style.border = "thick solid #0000FF";
+    console.log("This function works");
+
+    //add intervals
+    for (let i = 0; i < 4; i++) {
+    setTimeout( () => console.log(initialSeq[i]), i * 3000)
+    }
 }
+
+
+function stopFunc() {
+    yellow.style.border = "none"
+    green.style.border = "thick solid #0000FF";
+    // yellow.style.border = "thick solid #0000FF";
+    console.log("This stop function works");
+}
+
+//click event for stop button
+stopButton.addEventListener("click", stopFunc);
+
 
  //randomizer 
  function randNumber() {
@@ -36,10 +64,6 @@ function startFunc() {
     return randNum 
 }
 
-//add intervals
-for (let i = 0; i < 4; i++) {
-    setTimeout( () => console.log(initialSeq[i]), i * 3000)
-}
 
 //dom manipulation for buttons to light up in a random sequen
 
