@@ -1,4 +1,4 @@
-![Winter GIF](https://giphy.com/gifs/oxLsWbH1rvy2A/5)
+![Winter GIF](https://giphy.com/gifs/oxLsWbH1rvy2A/)
 
 # Simon
 # Project Description: A short description of your game.
@@ -52,8 +52,8 @@ changing scope, re-arranging the order of the code, researching other methods, c
 eventually I went back to my original code. 
 
 ## 1. Design
-https://giphy.com/gifs/oxLsWbH1rvy2A/
-![wireframe 2](https://i.imgur.com/su1EHDo.png)
+![wireframe 1](https://i.imgur.com/su1EHDo.png)
+![wireframe 2](https://i.imgur.com/E9dToM1.png)
  
 
 
