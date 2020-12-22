@@ -1,4 +1,4 @@
-![Winter GIF](https://giphy.com/gifs/oxLsWbH1rvy2A/)
+![Winter GIF](https://media.giphy.com/media/oxLsWbH1rvy2A/giphy.gif)
 
 # Simon
 # Project Description: A short description of your game.
