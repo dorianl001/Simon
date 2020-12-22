@@ -11,6 +11,7 @@ let startButton = document.querySelector("#startFunc");
 //stop button
 let stopButton = document.querySelector("#stopFunc");
 
+
 //click event  
 function clickButton() {
     console.log("It's alive!");
@@ -21,13 +22,23 @@ let initialSeq = Array(4).fill().map((element, index) => index + 0);
 console.log(initialSeq)
 
 //the sequence the user will repeatt
-let userSeq = []
+let userSeq = [];
 
 //start button 
  startButton = document.querySelector("#startFunc");
 
 //click event listener for the startButton
 startButton.addEventListener("click", startFunc)
+
+//this variable will keep track of the number of rounds played
+let level = 0;
+
+//create a function that will start the next sequence of clicks/new round
+function newRound() {
+    level += 1;
+    let levelStage = document.querySelector("#level");
+    levelStage.innerHTML = `Level: ${level}`;
+} 
 
 // buttons array sets the sequence in which buttons light up
 let buttons = [red, green, blue, yellow]
@@ -70,13 +81,3 @@ randNumber();
 
 //dom manipulation for buttons to light up in a random sequen
 
-//this variable will keep track of the number of rounds played
-let level = 0;
-
-//create a function that will start the next sequence of clicks/new round
-function newRound() {
-    level += 1;
-} 
-
-const levelStage = document.querySelector("#level");
-    levelStage.innerHTML = `Level: ${level}`;
