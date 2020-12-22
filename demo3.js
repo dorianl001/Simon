@@ -20,8 +20,8 @@ function clickButton() {
 let initialSeq = Array(4).fill().map((element, index) => index + 0);
 console.log(initialSeq)
 
-//the sequence the user will repeat
-let userSeq = [];
+//the sequence the user will repeatt
+let userSeq = []
 
 //start button 
  startButton = document.querySelector("#startFunc");
@@ -29,47 +29,43 @@ let userSeq = [];
 //click event listener for the startButton
 startButton.addEventListener("click", startFunc)
 
+// buttons array sets the sequence in which buttons light up
+let buttons = [red, green, blue, yellow]
+initialSeq = [0, 3, 1, 1, 0];
 
-function startFunc() {
-    setTimeout( () => {red.style.border = "thick solid #0000FF";}, 600)
-    setTimeout( () => {red.style.border = "none";}, 2000)
-    setTimeout( () => {green.style.border = "thick solid #0000FF";}, 600)
-    setTimeout( () => {green.style.border = "none";}, 2000)
-    setTimeout( () => {blue.style.border = "thick solid #000000";}, 600)
-    setTimeout( () => {blue.style.border = "none";}, 2000)
-    setTimeout( () => {yellow.style.border = "thick solid #0000FF";}, 600)
-    setTimeout( () => {yellow.style.border = "none";}, 2000)
-    // startButton.style.visibility = "hidden"
-    // green.style.border = "thick solid #0000FF";
-    // green.style.border = "none";
-    // yellow.style.border = "thick solid #0000FF";
-    console.log("This function works");
-
-    //add intervals
-    for (let i = 0; i < 4; i++) {
-    setTimeout( () => console.log(initialSeq[i]), i * 3000)
+//start button function starts the game
+function startFunc(){
+    for (let i = 0; i < initialSeq.length; i++) {
+        setTimeout( () => console.log("squareNumber", initialSeq[i]), i * 800)
+        setTimeout( () => {buttons[initialSeq[i]].style.border = "thick solid #000000";}, i * 800)
+        setTimeout( () => {buttons[initialSeq[i]].style.border = "none";}, (i * 800) + 500)
     }
+    newRound();
 }
 
-
+//stop button function
 function stopFunc() {
     yellow.style.border = "none"
     green.style.border = "thick solid #0000FF";
-    // yellow.style.border = "thick solid #0000FF";
+    yellow.style.border = "thick solid #0000FF";
     console.log("This stop function works");
 }
 
 //click event for stop button
 stopButton.addEventListener("click", stopFunc);
 
+ let randNum = [];
 
- //randomizer 
+  //randomizer 
  function randNumber() {
-     let gameButtons = ["red", "green", "blue", "yellow"]
-    var randNum = Math.floor(Math.random() * gameButtons.length);
+    let gameButtons = [red, green, blue, yellow]
+    randNum = gameButtons[Math.floor(Math.random() * gameButtons.length)];
     //initialSeq.push(randNum)
-    return randNum 
+    console.log(randNum)
+    // return randNum 
 }
+
+randNumber();
 
 
 //dom manipulation for buttons to light up in a random sequen
@@ -81,3 +77,6 @@ let level = 0;
 function newRound() {
     level += 1;
 } 
+
+const levelStage = document.querySelector("#level");
+    levelStage.innerHTML = `Level: ${level}`;
