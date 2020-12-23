@@ -58,7 +58,7 @@ eventually I went back to my original code.
 
 
 ## 2. MVP Goals
-* As a player, I want the game to provide a countdown so I know when to start the game.
+* As a player, I want the game to start when I click the start button.
 * As a player, I want to know if I chose the wrong button.
 * As a player, I want the game to become increasingly difficult (speed and sequence)
 * As a player, I want to know what round I am in.

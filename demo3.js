@@ -14,7 +14,7 @@ let stopButton = document.querySelector("#stopFunc");
 
 //click function records the users click
 function clickButton(event) {
-    // console.log(event.target.getAttribute("num"));
+    //console.log(event.target.getAttribute("num"));
     userSeq.push(event.target.getAttribute("num"));
      console.log(userSeq)
      win();
@@ -22,7 +22,7 @@ function clickButton(event) {
 
 //the sequence the game will initiate 
 let initialSeq = Array(4).fill().map((element, index) => index + 0);
-console.log("initialSeq", initialSeq)
+ console.log("initialSeq", initialSeq)
 
 //the sequence the user will repeat
 let userSeq = []; 
@@ -47,9 +47,9 @@ function newRound() {
 } 
 
 // buttons array sets the sequence in which buttons light up
-let buttons = [red, green, blue, yellow]
+let buttons = [red, blue, yellow, green]
 let secInitialSeq = [0, 3, 1, 1, 0];
-console.log("second", initialSeq)
+console.log(initialSeq);
 //start button function starts the game
 function startFunc(){
     for (let i = 0; i < initialSeq.length; i++) {
@@ -71,28 +71,32 @@ function stopFunc() {
 //click event for stop button
 stopButton.addEventListener("click", stopFunc);
 
- let randNum = [];
+//let randNum = [];
 
   //randomizer 
- function randNumber() {
-    let gameButtons = [red, green, blue, yellow]
-    randNum = gameButtons[Math.floor(Math.random() * gameButtons.length)];
-    //initialSeq.push(randNum)
-    console.log(randNum)
-    // return randNum 
-}
+//  function randNumber() {
+//     let gameButtons = [red, green, blue, yellow]
+//     randNum = gameButtons[Math.floor(Math.random() * gameButtons.length)];
+//     //initialSeq.push(randNum)
 
-randNumber();
+//     console.log(randNum)
+//     // return randNum 
+// }
 
-let a1 = ["item1", "item2"]
-let a2 = ["item1", "item2"]
-//dom manipulation for buttons to light up in a random sequen
+// randNumber();
 
+
+//win function compares initial and user sequence to find out if the user won or lost
 function win() {
-    let numUserSeqSort = userSeq.map(Number).slice().sort() 
+    let numUserSeqSort = userSeq.map(Number).slice().sort()
     
     initialSeq.length === numUserSeqSort.length && initialSeq.slice().sort().every(function(v, i){
         return v === numUserSeqSort[i];
 
     }) 
+    if (initialSeq === userSeq) {
+        console.log("You win!");
+    } else {
+        console.log("You lose!!");
+    }
 }                                              
