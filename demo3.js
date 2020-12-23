@@ -12,17 +12,23 @@ let startButton = document.querySelector("#startFunc");
 let stopButton = document.querySelector("#stopFunc");
 
 
-//click event  
-function clickButton() {
-    console.log("It's alive!");
+//click function records the users click
+function clickButton(event) {
+    // console.log(event.target.getAttribute("num"));
+    userSeq.push(event.target.getAttribute("num"));
+     console.log(userSeq)
+     win();
 }
 
-//the sequence the game will initiate
+//the sequence the game will initiate 
 let initialSeq = Array(4).fill().map((element, index) => index + 0);
-console.log(initialSeq)
+console.log("initialSeq", initialSeq)
 
-//the sequence the user will repeatt
-let userSeq = [];
+//the sequence the user will repeat
+let userSeq = []; 
+//the array should record the repeated sequence to confirm if the user passed the current level
+//the next round function initiates a new round and builds upon the current sequence
+
 
 //start button 
  startButton = document.querySelector("#startFunc");
@@ -33,7 +39,7 @@ startButton.addEventListener("click", startFunc)
 //this variable will keep track of the number of rounds played
 let level = 0;
 
-//create a function that will start the next sequence of clicks/new round
+//create a function to update new round
 function newRound() {
     level += 1;
     let levelStage = document.querySelector("#level");
@@ -42,8 +48,8 @@ function newRound() {
 
 // buttons array sets the sequence in which buttons light up
 let buttons = [red, green, blue, yellow]
-initialSeq = [0, 3, 1, 1, 0];
-
+let secInitialSeq = [0, 3, 1, 1, 0];
+console.log("second", initialSeq)
 //start button function starts the game
 function startFunc(){
     for (let i = 0; i < initialSeq.length; i++) {
@@ -78,6 +84,15 @@ stopButton.addEventListener("click", stopFunc);
 
 randNumber();
 
-
+let a1 = ["item1", "item2"]
+let a2 = ["item1", "item2"]
 //dom manipulation for buttons to light up in a random sequen
 
+function win() {
+    let numUserSeqSort = userSeq.map(Number).slice().sort() 
+    
+    initialSeq.length === numUserSeqSort.length && initialSeq.slice().sort().every(function(v, i){
+        return v === numUserSeqSort[i];
+
+    }) 
+}                                              
