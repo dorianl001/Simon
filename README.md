@@ -48,8 +48,7 @@ I was trying to refactor my previous code to make it cleaner when my previous co
 I think I got the error from changing my code which made i the iterator have a null value. 
 
 ## Everything you've tried
-changing scope, re-arranging the order of the code, researching other methods, console logging the results for more insight,
-eventually I went back to my original code. 
+changing scope, re-arranging the order of the code, researching other methods, and console logging the results for more insight. After some guidance; the for loop logic was changed, added some variables on top of the loop, and made an adjustment to the setTimeOut interval.
 
 ## 1. Design
 ![wireframe 1](https://i.imgur.com/su1EHDo.png)

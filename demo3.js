@@ -74,29 +74,37 @@ stopButton.addEventListener("click", stopFunc);
 //let randNum = [];
 
   //randomizer 
-//  function randNumber() {
-//     let gameButtons = [red, green, blue, yellow]
-//     randNum = gameButtons[Math.floor(Math.random() * gameButtons.length)];
-//     //initialSeq.push(randNum)
+ function randNumber() {
+    let gameButtons = [red, green, blue, yellow]
+    randNum = gameButtons[Math.floor(Math.random() * gameButtons.length)];
+    //initialSeq.push(randNum)
 
-//     console.log(randNum)
-//     // return randNum 
-// }
+    console.log(randNum)
+    // return randNum 
+}
 
-// randNumber();
+randNumber();
 
 
 //win function compares initial and user sequence to find out if the user won or lost
-function win() {
-    let numUserSeqSort = userSeq.map(Number).slice().sort()
+// function win() {
+//     let numUserSeqSort = userSeq.map(Number).slice().sort()
     
-    initialSeq.length === numUserSeqSort.length && initialSeq.slice().sort().every(function(v, i){
-        return v === numUserSeqSort[i];
+//     initialSeq.length === numUserSeqSort.length && initialSeq.slice().sort().every(function(v, i){
+//         return v === numUserSeqSort[i];
 
-    }) 
-    if (initialSeq === userSeq) {
-        console.log("You win!");
+//     }) 
+//     if (initialSeq === userSeq) {
+//         console.log("You win!");
+//     } else {
+//         console.log("You lose!!");
+//     }
+// }                                        
+
+function win() {
+    if (initialSeq.length === userSeq.length) {
+       console.log("you win")
     } else {
-        console.log("You lose!!");
+       console.log("you lose")
     }
-}                                              
+}
