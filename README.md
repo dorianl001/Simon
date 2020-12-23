@@ -65,7 +65,7 @@ changing scope, re-arranging the order of the code, researching other methods, a
 
 ## 3. Stretch Goals
 
-* As a player, I would like to see a timer in order to know how much time I have to repeat a given sequence.* `outerHTML`
+* As a player, I would like to see a timer in order to know how much time I have to repeat a given sequence.
 * As a player, I would like to hear metal music for the suspense and thrill aspect of the game.
 * As a player, I would like to be allowed to repeat a sequence once per round.
 
